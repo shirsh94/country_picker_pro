@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 typedef CustomFlagBuilder = Widget Function(Country country);
 
+// ignore: must_be_immutable
 class CountryListView extends StatefulWidget {
   final ValueChanged<Country> onSelect;
 

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 enum LetterAlignment { left, right }
 
+// ignore: must_be_immutable
 class AlphaScroller extends StatefulWidget {
   AlphaScroller(
       {Key? key,
@@ -72,7 +73,7 @@ class _AlphabetScrollViewState extends State<AlphaScroller> {
 
   ScrollController listController = ScrollController();
   final _selectedIndexNotifier = ValueNotifier<int>(0);
-  final positionNotifer = ValueNotifier<Offset>(Offset(0, 0));
+  final positionNotifer = ValueNotifier<Offset>(const Offset(0, 0));
   final Map<String, int> firstIndexPosition = {};
   List<String> _filteredAlphabets = [];
   final letterKey = GlobalKey();
@@ -98,24 +99,22 @@ class _AlphabetScrollViewState extends State<AlphaScroller> {
   }
 
   void calculateFirstIndex() {
-    _filteredAlphabets.forEach((letter) {
+    for (var letter in _filteredAlphabets) {
       Country? firstElement = _list.firstWhereOrNull(
           (item) => item.name.toLowerCase().startsWith(letter));
       if (firstElement != null) {
         int index = _list.indexOf(firstElement);
         firstIndexPosition[letter] = index;
       }
-    });
+    }
   }
 
   void scrolltoIndex(int x, Offset offset) {
     int index = firstIndexPosition[_filteredAlphabets[x].toLowerCase()]!;
     final scrollToPostion = widget.itemExtent * index;
-    if (index != null) {
-      listController.animateTo((scrollToPostion),
-          duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
-    }
-    positionNotifer.value = offset;
+    listController.animateTo((scrollToPostion),
+        duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
+      positionNotifer.value = offset;
   }
 
   void onVerticalDrag(Offset offset) {
@@ -138,7 +137,7 @@ class _AlphabetScrollViewState extends State<AlphaScroller> {
             controller: listController,
             scrollDirection: Axis.vertical,
             itemCount: _list.length,
-            physics: ClampingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             itemBuilder: (_, x) {
               return ConstrainedBox(
                   constraints: BoxConstraints(maxHeight: widget.itemExtent),
