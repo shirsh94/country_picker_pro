@@ -9,7 +9,7 @@ class CountryProvider {
   /// Constructs a new [CountryProvider] and initializes the list of countries.
   CountryProvider()
       : _countries =
-  countryCodes.map((country) => Country.from(json: country)).toList();
+            countryCodes.map((country) => Country.from(json: country)).toList();
 
   /// Returns a list of all countries.
   List<Country> getAll() {
@@ -37,7 +37,7 @@ class CountryProvider {
   /// Returns a list of countries corresponding to the input codes.
   List<Country> findCountriesByCode(List<String> codes) {
     final List<String> _codes =
-    codes.map((code) => code.toUpperCase()).toList();
+        codes.map((code) => code.toUpperCase()).toList();
     final List<Country> countries = [];
     for (final code in _codes) {
       final Country? country = findByCode(code);

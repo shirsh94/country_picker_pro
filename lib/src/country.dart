@@ -154,9 +154,9 @@ class Country {
         name.toLowerCase().startsWith(query0.toLowerCase()) ||
         countryCode.toLowerCase().startsWith(query0.toLowerCase()) ||
         (localizations
-            ?.countryName(countryCode: countryCode)
-            ?.toLowerCase()
-            .startsWith(query0.toLowerCase()) ??
+                ?.countryName(countryCode: countryCode)
+                ?.toLowerCase()
+                .startsWith(query0.toLowerCase()) ??
             false);
   }
 

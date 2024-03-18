@@ -79,22 +79,32 @@ class MainPage extends StatelessWidget {
                 showPhoneCode: true,
                 appBarTitle: "Select Country",
                 onSelect: (Country country) {
-                  debugPrint('Selected country code without plus sign: ${country.phoneCode}');
-                  debugPrint('Select country code with plus sign: ${country.callingCode}');
-                  debugPrint('Select country countryCode: ${country.countryCode}');
+                  debugPrint(
+                      'Selected country code without plus sign: ${country.phoneCode}');
+                  debugPrint(
+                      'Select country code with plus sign: ${country.callingCode}');
+                  debugPrint(
+                      'Select country countryCode: ${country.countryCode}');
                   debugPrint('Select country capital: ${country.capital}');
                   debugPrint('Select country language: ${country.language}');
-                  debugPrint('Select country currency details: ${country.currency.toString()}');
-                  debugPrint('Select country popular sports: ${country.popularSports.toString()}');
+                  debugPrint(
+                      'Select country currency details: ${country.currency.toString()}');
+                  debugPrint(
+                      'Select country popular sports: ${country.popularSports.toString()}');
                   debugPrint('Select country time zone: ${country.timeZone}');
                   debugPrint('Select country region: ${country.region}');
                   debugPrint('Select country sub region: ${country.subregion}');
-                  debugPrint('Select country place identifier: ${country.resident}');
-                  debugPrint('Select country Internet top-level domain: ${country.internetTld}');
-                  debugPrint('Select country flag emoji String: ${country.flagEmojiText}');
+                  debugPrint(
+                      'Select country place identifier: ${country.resident}');
+                  debugPrint(
+                      'Select country Internet top-level domain: ${country.internetTld}');
+                  debugPrint(
+                      'Select country flag emoji String: ${country.flagEmojiText}');
                   debugPrint('Select country e164Sc: ${country.e164Sc}');
-                  debugPrint('Select country display Name No Country Code: ${country.displayNameNoCountryCode}');
-                  debugPrint('Select country display name: ${country.displayName}');
+                  debugPrint(
+                      'Select country display Name No Country Code: ${country.displayNameNoCountryCode}');
+                  debugPrint(
+                      'Select country display name: ${country.displayName}');
                   debugPrint('Select country e164Key: ${country.e164Key}');
                 },
                 listType: ListType.list,

@@ -50,7 +50,7 @@ class CountryLocalizations {
 
   // LocalizationsDelegate for CountryLocalizations
   static const LocalizationsDelegate<CountryLocalizations> delegate =
-  _CountryLocalizationsDelegate();
+      _CountryLocalizationsDelegate();
 
   // Method for retrieving country name based on country code
   String? countryName({required String countryCode}) {

@@ -73,8 +73,8 @@ void CountrySelector({
 }) {
   // Assert that either remove or countrySorter is provided, not both.
   assert(
-  remove == null || countrySorter == null,
-  'Cannot provide both remove and countrySorter',
+    remove == null || countrySorter == null,
+    'Cannot provide both remove and countrySorter',
   );
   // Call the showCountryListView function with the provided parameters.
   showCountryListView(
