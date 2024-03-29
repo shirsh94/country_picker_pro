@@ -2,8 +2,6 @@ import 'package:country_picker_pro/src/controllers/country_selector.dart';
 import 'package:country_picker_pro/src/controllers/platform_information.dart';
 import 'package:country_picker_pro/src/res/country_json.dart';
 import 'package:country_picker_pro/src/view/country_view.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 typedef CustomFlagBuilder = Widget Function(Country country);
@@ -275,7 +273,7 @@ class _CountryListViewState extends State<CountryListView> {
                     ? Expanded(
                         flex: 1,
                         child: ScrollConfiguration(
-                            behavior: ScrollBehavior(),
+                            behavior: const ScrollBehavior(),
                             child: SingleChildScrollView(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -288,7 +286,7 @@ class _CountryListViewState extends State<CountryListView> {
                                       onTap: () {
                                         scrollToCountry(letter);
                                       },
-                                      child: Container(
+                                      child: SizedBox(
                                         width:
                                             MediaQuery.of(context).size.width,
                                         child: MouseRegion(
@@ -309,7 +307,7 @@ class _CountryListViewState extends State<CountryListView> {
                                 }).toList(),
                               ),
                             )))
-                    : SizedBox.shrink()
+                    : const SizedBox.shrink()
               ],
             ),
           ),
@@ -391,7 +389,7 @@ class _CountryListViewState extends State<CountryListView> {
       );
     } else {
       return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 2.0),
+        padding: const EdgeInsets.symmetric(horizontal: 2.0),
         child: Container(
           decoration: BoxDecoration(
             border: Border.all(
@@ -409,52 +407,50 @@ class _CountryListViewState extends State<CountryListView> {
                 widget.onSelect(country);
                 Navigator.pop(context);
               },
-              child: Container(
-                child: Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const SizedBox(width: 20),
-                      if (widget.customFlagBuilder == null)
-                        _flagView(country, listType)
-                      else
-                        widget.customFlagBuilder!(country),
-                      if (widget.showPhoneCode && !country.iswWorldWide) ...[
-                        const SizedBox(width: 15),
-                        SizedBox(
-                          width: 45,
-                          child: Text(
-                            '${isRtl ? '' : '+'}${country.phoneCode}${isRtl ? '+' : ''}',
-                            style: TextStyle(
-                                color: countryTextColour ?? Colors.black,
-                                fontSize: countryTitleSize ?? 16,
-                                fontWeight:
-                                    countryFontWeight ?? FontWeight.normal),
-                          ),
-                        ),
-                        const SizedBox(width: 5),
-                      ] else
-                        const SizedBox(width: 15),
-                      Padding(
-                        padding: EdgeInsets.only(right: 2, left: 2),
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const SizedBox(width: 20),
+                    if (widget.customFlagBuilder == null)
+                      _flagView(country, listType)
+                    else
+                      widget.customFlagBuilder!(country),
+                    if (widget.showPhoneCode && !country.iswWorldWide) ...[
+                      const SizedBox(width: 15),
+                      SizedBox(
+                        width: 45,
                         child: Text(
-                          CountryLocalizations.of(context)
-                                  ?.countryName(
-                                      countryCode: country.countryCode)
-                                  ?.replaceAll(RegExp(r"\s+"), " ") ??
-                              country.name,
-                          maxLines: 2,
-                          textAlign: TextAlign.center,
+                          '${isRtl ? '' : '+'}${country.phoneCode}${isRtl ? '+' : ''}',
                           style: TextStyle(
                               color: countryTextColour ?? Colors.black,
                               fontSize: countryTitleSize ?? 16,
                               fontWeight:
                                   countryFontWeight ?? FontWeight.normal),
                         ),
-                      )
-                    ],
-                  ),
+                      ),
+                      const SizedBox(width: 5),
+                    ] else
+                      const SizedBox(width: 15),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 2, left: 2),
+                      child: Text(
+                        CountryLocalizations.of(context)
+                                ?.countryName(
+                                    countryCode: country.countryCode)
+                                ?.replaceAll(RegExp(r"\s+"), " ") ??
+                            country.name,
+                        maxLines: 2,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: countryTextColour ?? Colors.black,
+                            fontSize: countryTitleSize ?? 16,
+                            fontWeight:
+                                countryFontWeight ?? FontWeight.normal),
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
@@ -518,7 +514,7 @@ class _CountryListViewState extends State<CountryListView> {
           if (widget.listType == ListType.grid) {
             if (width <= 75 && width >= 50) {
               _controller.animateTo(i * 72.0,
-                  duration: Duration(seconds: 1), curve: Curves.easeInOut);
+                  duration: const Duration(seconds: 1), curve: Curves.easeInOut);
             } else if (width <= 100 && width >= 76) {
               animateToDataPosition(i, 38.0);
             } else if (width <= 125 && width >= 101) {
@@ -674,9 +670,10 @@ class _CountryListViewState extends State<CountryListView> {
             } else if (width <= 2000 && width >= 1976) {
               animateToDataPosition(i, 116.0);
             }
-          } else
+          } else {
             _controller.animateTo(i * 56.6,
-                duration: Duration(seconds: 1), curve: Curves.easeInOut);
+                duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+          }
         });
         break;
       }
@@ -685,6 +682,6 @@ class _CountryListViewState extends State<CountryListView> {
 
   void animateToDataPosition(int i, double data) {
     _controller.animateTo(i * data,
-        duration: Duration(seconds: 1), curve: Curves.easeInOut);
+        duration: const Duration(seconds: 1), curve: Curves.easeInOut);
   }
 }

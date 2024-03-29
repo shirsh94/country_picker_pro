@@ -1,9 +1,10 @@
-Here's the updated feature section with additional features for the `country_picker_pro` package:
-
 # Country Picker Pro
 
-The `country_picker_pro` package provides a customizable Country Selector widget for Flutter
-applications.
+The `country_picker_pro` package provides a customizable Country Selector widget for Flutter applications.
+
+[![pub package](https://img.shields.io/pub/v/country_picker_pro.svg)](https://pub.dev/packages/country_picker_pro)
+
+
 
 ## Features
 
