@@ -1,6 +1,6 @@
 name: country_picker_pro
 description: "The country_picker_pro Flutter package provides a customizable Country Selector widget, enabling users to select countries with detailed information and customization options."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/shirsh94/country_picker_pro
 
 environment:

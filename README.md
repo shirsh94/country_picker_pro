@@ -1,3 +1,5 @@
+Here's the updated feature section with additional features for the `country_picker_pro` package:
+
 # Country Picker Pro
 
 The `country_picker_pro` package provides a customizable Country Selector widget for Flutter
@@ -9,13 +11,13 @@ applications.
 - **Preferred Countries:** Display preferred countries at the top of the list.
 - **Phone Codes:** Show phone codes for each country.
 - **Customization:** Customize the appearance of the widget.
+- **Alphabetical Tap to Search:** Quickly search for countries by tapping on an alphabet, similar to contact lists.
 
 ## Screenshots
 
-| ![Screenshot 1](https://raw.githubusercontent.com/shirsh94/country_picker_pro/main/assets/Screenshot_first.jpg) | ![Screenshot 2](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_second.jpg?raw=true) |
-|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| ![Screenshot 3](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_third.jpg?raw=true)   | ![Screenshot 4](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_fourth.jpg?raw=true) |
-
+| ![Screenshot 1](https://raw.githubusercontent.com/shirsh94/country_picker_pro/main/assets/Screenshot_first.jpg)  | ![Screenshot 2](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_second.jpg?raw=true) | ![Screenshot 3](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_three.jpg?raw=true) |
+|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| ![Screenshot 4](https://raw.githubusercontent.com/shirsh94/country_picker_pro/main/assets/Screenshot_fourth.jpg) | ![Screenshot 5](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_fifth.jpg?raw=true)  | ![Screenshot 6](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_sixth.jpg?raw=true) |
 
 ## Installation
 
@@ -23,7 +25,7 @@ Add `country_picker_pro` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  country_picker_pro: ^0.0.1
+  country_picker_pro: ^0.0.2
 ```
 
 ## Usage
@@ -75,6 +77,7 @@ CountrySelector(
 - **searchBarTextColor:** The text color of the search bar.
 - **searchBarHintColor:** The hint text color of the search bar.
 - **countryTheme:** Additional theme customization options.
+- **showSearchBox:** Whether to show the search box.
 
 ## Country Details
 
@@ -109,7 +112,6 @@ The `CountrySelector` widget provides detailed information about each country, i
   United States).
 - `flag_emoji`: The flag emoji for the country (e.g., 🇺🇸 for the United States).
 
-
 ### For localization:
 Add the `CountryLocalizations.delegate` in the list of your app delegates.
 ```Dart
@@ -141,7 +143,9 @@ CountrySelector(
        debugPrint('Selected country code without plus sign: ${country.phoneCode}');
        debugPrint('Select country code with plus sign: ${country.callingCode}');
        debugPrint('Select country countryCode: ${country.countryCode}');
-       debugPrint('Select country capital: ${country.capital}');
+       debugPrint
+
+('Select country capital: ${country.capital}');
        debugPrint('Select country language: ${country.language}');
        debugPrint('Select country currency details: ${country.currency.toString()}');
        debugPrint('Select country popular sports: ${country.popularSports.toString()}');
@@ -185,3 +189,5 @@ CountrySelector(
    showSearchBox:true,
 );
 ```
+
+Is there anything else you'd like to add or modify?
