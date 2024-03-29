@@ -272,41 +272,47 @@ class _CountryListViewState extends State<CountryListView> {
                         widget.listType == ListType.list
                     ? Expanded(
                         flex: 1,
-                        child: ScrollConfiguration(
-                            behavior: const ScrollBehavior(),
-                            child: SingleChildScrollView(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: alphabet.map((letter) {
-                                  return Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 2.0),
-                                    child: InkWell(
-                                      onTap: () {
-                                        scrollToCountry(letter);
-                                      },
-                                      child: SizedBox(
-                                        width:
-                                            MediaQuery.of(context).size.width,
-                                        child: MouseRegion(
-                                          cursor: SystemMouseCursors.click,
-                                          child: Text(
-                                            letter,
-                                            textAlign: TextAlign.center,
-                                            style: TextStyle(
-                                                fontSize: MediaQuery.of(context)
-                                                        .size
-                                                        .height *
-                                                    0.01595),
+                        child: Container(
+                          color: widget.backgroundColour ?? Colors.white,
+                          child: ScrollConfiguration(
+                              behavior: const ScrollBehavior(),
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: alphabet.map((letter) {
+                                    return Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 2.0),
+                                      child: InkWell(
+                                        onTap: () {
+                                          scrollToCountry(letter);
+                                        },
+                                        child: SizedBox(
+                                          width:
+                                              MediaQuery.of(context).size.width,
+                                          child: MouseRegion(
+                                            cursor: SystemMouseCursors.click,
+                                            child: Text(
+                                              letter,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                  color:
+                                                      widget.countryTextColour,
+                                                  fontSize:
+                                                      MediaQuery.of(context)
+                                                              .size
+                                                              .height *
+                                                          0.01595),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  );
-                                }).toList(),
-                              ),
-                            )))
+                                    );
+                                  }).toList(),
+                                ),
+                              )),
+                        ))
                     : const SizedBox.shrink()
               ],
             ),
@@ -437,8 +443,7 @@ class _CountryListViewState extends State<CountryListView> {
                       padding: const EdgeInsets.only(right: 2, left: 2),
                       child: Text(
                         CountryLocalizations.of(context)
-                                ?.countryName(
-                                    countryCode: country.countryCode)
+                                ?.countryName(countryCode: country.countryCode)
                                 ?.replaceAll(RegExp(r"\s+"), " ") ??
                             country.name,
                         maxLines: 2,
@@ -446,8 +451,7 @@ class _CountryListViewState extends State<CountryListView> {
                         style: TextStyle(
                             color: countryTextColour ?? Colors.black,
                             fontSize: countryTitleSize ?? 16,
-                            fontWeight:
-                                countryFontWeight ?? FontWeight.normal),
+                            fontWeight: countryFontWeight ?? FontWeight.normal),
                       ),
                     )
                   ],
@@ -514,7 +518,8 @@ class _CountryListViewState extends State<CountryListView> {
           if (widget.listType == ListType.grid) {
             if (width <= 75 && width >= 50) {
               _controller.animateTo(i * 72.0,
-                  duration: const Duration(seconds: 1), curve: Curves.easeInOut);
+                  duration: const Duration(seconds: 1),
+                  curve: Curves.easeInOut);
             } else if (width <= 100 && width >= 76) {
               animateToDataPosition(i, 38.0);
             } else if (width <= 125 && width >= 101) {

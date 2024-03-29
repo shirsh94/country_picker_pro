@@ -125,7 +125,7 @@ class MainPage extends StatelessWidget {
                 searchBarAutofocus: true,
                 searchBarIcon: Icons.search,
                 searchBarBackgroundColor: Colors.white,
-                searchBarBorderColor: Colors.indigo,
+                searchBarBorderColor: Colors.black,
                 searchBarBorderWidth: 2,
                 searchBarOuterBackgroundColor: Colors.white,
                 searchBarTextColor: Colors.black,
