@@ -15,7 +15,7 @@ applications.
 
 ## Screenshots
 
-| ![Screenshot 1](https://raw.githubusercontent.com/shirsh94/country_picker_pro/main/assets/Screenshot_first.jpg)  | ![Screenshot 2](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_second.jpg?raw=true) | ![Screenshot 3](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_three.jpg?raw=true) |
+| ![Screenshot 1](https://raw.githubusercontent.com/shirsh94/country_picker_pro/main/assets/Screenshot_first.jpg)  | ![Screenshot 2](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_second.jpg?raw=true) | ![Screenshot 3](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_third.jpg?raw=true) |
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | ![Screenshot 4](https://raw.githubusercontent.com/shirsh94/country_picker_pro/main/assets/Screenshot_fourth.jpg) | ![Screenshot 5](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_fifth.jpg?raw=true)  | ![Screenshot 6](https://github.com/shirsh94/country_picker_pro/blob/main/assets/Screenshot_sixth.jpg?raw=true) |
 
