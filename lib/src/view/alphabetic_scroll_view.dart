@@ -114,7 +114,7 @@ class _AlphabetScrollViewState extends State<AlphaScroller> {
     final scrollToPostion = widget.itemExtent * index;
     listController.animateTo((scrollToPostion),
         duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
-      positionNotifer.value = offset;
+    positionNotifer.value = offset;
   }
 
   void onVerticalDrag(Offset offset) {

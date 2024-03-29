@@ -70,6 +70,7 @@ void CountrySelector({
   IconData? searchBarIcon,
   EdgeInsetsGeometry? searchBoxPadding,
   ListType listType = ListType.list,
+  bool alphabetScrollEnabledWidget = true,
 }) {
   // Assert that either remove or countrySorter is provided, not both.
   assert(
@@ -114,6 +115,7 @@ void CountrySelector({
     searchBarHintColor: searchBarHintColor,
     searchBarBorderWidth: searchBarBorderWidth,
     searchBarIcon: searchBarIcon,
+    alphabetScrollEnabledWidget: alphabetScrollEnabledWidget,
     searchBoxPadding: searchBoxPadding,
     listType: listType,
   );

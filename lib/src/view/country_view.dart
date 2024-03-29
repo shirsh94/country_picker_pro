@@ -57,6 +57,8 @@ void showCountryListView({
   double? searchBarBorderWidth,
   IconData? searchBarIcon,
   EdgeInsetsGeometry? searchBoxPadding,
+  bool alphabetScrollEnabledWidget =
+      true, //This feature currently not support for grid list.
 }) {
   Navigator.of(context)
       .push(
@@ -114,7 +116,8 @@ void showCountryListView({
               searchBarBorderWidth,
               searchBarIcon,
               searchBoxPadding,
-              searchBarHintColor),
+              searchBarHintColor,
+              alphabetScrollEnabledWidget),
         );
       },
     ),
@@ -152,6 +155,7 @@ Widget _viewData(
   IconData? searchBarIcon,
   EdgeInsetsGeometry? searchBoxPadding,
   Color? searchBarHintColor,
+  bool alphabetScrollEnabledWidget,
 ) {
   final BorderRadius borderRadius = BorderRadius.only(
     topLeft: Radius.circular(countryTheme?.appBarBorderRadius ?? 10.0),
@@ -192,6 +196,7 @@ Widget _viewData(
       searchBarBorderWidth: searchBarBorderWidth,
       searchBarIcon: searchBarIcon,
       searchBoxPadding: searchBoxPadding,
+      alphabetScrollEnabledWidget: alphabetScrollEnabledWidget,
     ),
   );
 }

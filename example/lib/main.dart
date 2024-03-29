@@ -108,7 +108,7 @@ class MainPage extends StatelessWidget {
                   debugPrint('Select country e164Key: ${country.e164Key}');
                 },
                 listType: ListType.list,
-                appBarBackgroundColour: Colors.black,
+                appBarBackgroundColour: Colors.indigo,
                 appBarFontSize: 20,
                 appBarFontStyle: FontStyle.normal,
                 appBarFontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class MainPage extends StatelessWidget {
                 searchBarAutofocus: true,
                 searchBarIcon: Icons.search,
                 searchBarBackgroundColor: Colors.white,
-                searchBarBorderColor: Colors.black,
+                searchBarBorderColor: Colors.indigo,
                 searchBarBorderWidth: 2,
                 searchBarOuterBackgroundColor: Colors.white,
                 searchBarTextColor: Colors.black,
@@ -133,6 +133,7 @@ class MainPage extends StatelessWidget {
                 countryTheme: const CountryThemeData(
                   appBarBorderRadius: 10,
                 ),
+                alphabetScrollEnabledWidget: true,
                 showSearchBox: true);
           },
           child: const Text('Country Picker'),

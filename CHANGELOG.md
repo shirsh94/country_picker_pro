@@ -1,3 +1,24 @@
+## [0.0.2] - Alphabetical Tap to Search
+- Added feature to allow users to tap on an alphabet to quickly search for countries starting with that letter, similar to contact lists.
+- Improved user experience by providing a fast and intuitive way to navigate through long lists of countries.
+
+### Added
+- AlphabeticalTapToSearch feature for easy searching through country names.
+- Smooth scrolling to the selected alphabet when tapped, enhancing the search experience.
+
+### Usage
+- Updated usage example to demonstrate the AlphabeticalTapToSearch feature and its integration into Flutter apps.
+
+### Bug Fixes
+Fixed a bug where the search bar would not focus correctly on initial load, ensuring a smoother user interaction.
+
+### Performance Improvements
+- Optimized the search algorithm for faster results when typing in the search bar.
+- Reduced memory usage when rendering the country list, resulting in a smoother scrolling experience.
+
+### Localization
+- Improved localization support for languages with different alphabet characters, ensuring proper rendering and search functionality.
+
 ## [0.0.1] - Initial Release
 - Provides a customizable Country Selector widget for Flutter applications.
 - Features country selection from a list of countries.
