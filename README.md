@@ -26,7 +26,7 @@ Add `country_picker_pro` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  country_picker_pro: ^0.0.2
+  country_picker_pro: ^0.0.4
 ```
 
 ## Usage
@@ -144,9 +144,7 @@ CountrySelector(
        debugPrint('Selected country code without plus sign: ${country.phoneCode}');
        debugPrint('Select country code with plus sign: ${country.callingCode}');
        debugPrint('Select country countryCode: ${country.countryCode}');
-       debugPrint
-
-('Select country capital: ${country.capital}');
+       debugPrint('Select country capital: ${country.capital}');
        debugPrint('Select country language: ${country.language}');
        debugPrint('Select country currency details: ${country.currency.toString()}');
        debugPrint('Select country popular sports: ${country.popularSports.toString()}');

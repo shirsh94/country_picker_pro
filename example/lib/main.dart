@@ -75,11 +75,8 @@ class MainPage extends StatelessWidget {
           onPressed: () {
             CountrySelector(
                 context: context,
-                viewType: ViewType.bottomsheet,
-                showDragBar: true,
-                borderRadius: 8,
+                viewType: ViewType.screen,
                 countryPreferred: <String>['US'],
-                showPhoneCode: true,
                 appBarTitle: "Select Country",
                 onSelect: (Country country) {
                   debugPrint(
@@ -110,7 +107,7 @@ class MainPage extends StatelessWidget {
                       'Select country display name: ${country.displayName}');
                   debugPrint('Select country e164Key: ${country.e164Key}');
                 },
-                listType: ListType.grid,
+                listType: ListType.list,
                 appBarBackgroundColour: Colors.indigo,
                 appBarFontSize: 20,
                 appBarFontStyle: FontStyle.normal,

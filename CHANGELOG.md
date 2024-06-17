@@ -1,3 +1,6 @@
+[0.0.4] - Bottom Sheet Country Picker
+- Added a bottom sheet view for the country picker, providing a more modern and user-friendly way to select a country.
+
 ## [0.0.2] - Alphabetical Tap to Search
 - Added feature to allow users to tap on an alphabet to quickly search for countries starting with that letter, similar to contact lists.
 - Improved user experience by providing a fast and intuitive way to navigate through long lists of countries.
