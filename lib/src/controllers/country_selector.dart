@@ -15,6 +15,12 @@ enum ListType {
   grid, // Display as a grid.
 }
 
+enum ViewType {
+  screen, // Display in new screen.
+  //popup, // Display inside a popup in current screen.
+  bottomsheet, // Display inside a bottomsheet in current screen.
+}
+
 /// Utility class containing helper methods.
 class Util {
   /// Converts a country code to its corresponding flag emoji.
@@ -34,6 +40,7 @@ extension StringExtensions on String {
 void CountrySelector({
   required BuildContext context,
   required ValueChanged<Country> onSelect,
+  ViewType? viewType = ViewType.screen,
   VoidCallback? onClosed,
   List<String>? countryPreferred,
   List<String>? remove,
@@ -71,6 +78,9 @@ void CountrySelector({
   EdgeInsetsGeometry? searchBoxPadding,
   ListType listType = ListType.list,
   bool alphabetScrollEnabledWidget = true,
+  bool showDragBar = true,
+  Widget? customDragBar,
+  double? borderRadius,
 }) {
   // Assert that either remove or countrySorter is provided, not both.
   assert(
@@ -80,6 +90,10 @@ void CountrySelector({
   // Call the showCountryListView function with the provided parameters.
   showCountryListView(
     context: context,
+    viewType: viewType,
+    showDragBar: showDragBar,
+    customDragBar: customDragBar,
+    borderRadius: borderRadius,
     onSelect: onSelect,
     onClosed: onClosed,
     remove: remove,

@@ -21,6 +21,7 @@ class CountryThemeData {
 void showCountryListView({
   required BuildContext context,
   required ValueChanged<Country> onSelect,
+  ViewType? viewType = ViewType.screen,
   VoidCallback? onClosed,
   List<String>? countryPreferred,
   List<String>? remove,
@@ -50,6 +51,9 @@ void showCountryListView({
   Color? dividerColour,
   ListType listType = ListType.list,
   Color? searchBarBackgroundColor,
+  double? borderRadius,
+  bool showDragBar = true,
+  Widget? customDragBar,
   Color? searchBarTextColor,
   Color? searchBarBorderColor,
   Color? searchBarOuterBackgroundColor,
@@ -60,6 +64,77 @@ void showCountryListView({
   bool alphabetScrollEnabledWidget =
       true, //This feature currently not support for grid list.
 }) {
+  if (viewType == ViewType.bottomsheet) {
+    showModalBottomSheet<void>(
+        context: context,
+        isScrollControlled: true,
+        isDismissible: true,
+        enableDrag: true,
+        clipBehavior: Clip.hardEdge,
+        backgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? 0))),
+        showDragHandle: false,
+        builder: (BuildContext context) {
+          return DraggableScrollableSheet(
+              expand: false,
+              initialChildSize: 0.7,
+              minChildSize: 0.2,
+              maxChildSize: 0.8,
+              // controller: DraggableScrollableController(),
+              builder: (context, scrollController) {
+                return Column(
+                  children: [
+                    if (viewType == ViewType.bottomsheet && showDragBar)
+                      customDragBar ??
+                          Container(
+                            // padding: const EdgeInsets.symmetric(vertical: 20),
+                            margin: const EdgeInsets.symmetric(vertical: 20),
+                            decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(8)),
+                            height: 6,
+                            width: 80,
+                          ),
+                    Expanded(
+                      child: Container(
+                        child: _viewData(
+                            context,
+                            onSelect,
+                            countryPreferred,
+                            remove,
+                            countrySorter,
+                            showPhoneCode,
+                            countryTheme,
+                            searchBarAutofocus,
+                            showWorldWide,
+                            showSearchBox,
+                            customFlagBuilder,
+                            countryTextColour,
+                            countryTitleSize,
+                            countryFontWeight,
+                            countryFontStyle,
+                            backgroundColour,
+                            appBarBackgroundColour,
+                            dividerColour,
+                            listType,
+                            searchBarBackgroundColor,
+                            searchBarTextColor,
+                            searchBarBorderColor,
+                            searchBarOuterBackgroundColor,
+                            searchBarBorderWidth,
+                            searchBarIcon,
+                            searchBoxPadding,
+                            searchBarHintColor,
+                            alphabetScrollEnabledWidget),
+                      ),
+                    ),
+                  ],
+                );
+              });
+        });
+    return;
+  }
   Navigator.of(context)
       .push(
     MaterialPageRoute(
