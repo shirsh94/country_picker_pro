@@ -3592,6 +3592,34 @@ final List<Map<String, dynamic>> countryCodes = [
     "flag_emoji": "🇲🇲"
   },
   {
+    "e164_cc": "234",
+    "iso2_cc": "NG",
+    "e164_sc": 0,
+    "geographic": true,
+    "level": 1,
+    "name": "Nigeria",
+    "example": "8021234567",
+    "display_name": "Nigeria (NG) [+234]",
+    "full_example_with_plus_sign": "+2348021234567",
+    "display_name_no_e164_cc": "Nigeria (NG)",
+    "e164_key": "234-NG-0",
+    "capital": "Abuja",
+    "language": "English",
+    "currency": {
+      "name": "Nigerian Naira",
+      "code": "NGN",
+      "symbol": "₦"
+    },
+    "popular_sports": ["Football", "Basketball", "Athletics"],
+    "calling_code": "+234",
+    "time_zone": "UTC+1",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "demonym": "Nigerian",
+    "internet_tld": ".ng",
+    "flag_emoji": "🇳🇬"
+  },
+  {
     "e164_cc": "264",
     "iso2_cc": "NA",
     "e164_sc": 0,
@@ -4242,6 +4270,34 @@ final List<Map<String, dynamic>> countryCodes = [
     "demonym": "Rwandan",
     "internet_tld": ".rw",
     "flag_emoji": "🇷🇼"
+  },
+  {
+    "e164_cc": "599",
+    "iso2_cc": "BQ",
+    "e164_sc": 3,
+    "geographic": true,
+    "level": 1,
+    "name": "Sint Eustatius",
+    "example": "3181234",
+    "display_name": "Sint Eustatius (BQ) [+599]",
+    "full_example_with_plus_sign": "+5993181234",
+    "display_name_no_e164_cc": "Sint Eustatius (BQ)",
+    "e164_key": "599-BQ-3",
+    "capital": "Oranjestad",
+    "language": "Dutch, English",
+    "currency": {
+      "name": "United States Dollar",
+      "code": "USD",
+      "symbol": "\$"
+    },
+    "popular_sports": ["Baseball", "Soccer"],
+    "calling_code": "+599",
+    "time_zone": "UTC-4",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "demonym": "Statian",
+    "internet_tld": ".bq",
+    "flag_emoji": "🇧🇶"
   },
   {
     "e164_cc": "590",
@@ -5384,6 +5440,34 @@ final List<Map<String, dynamic>> countryCodes = [
     "demonym": "Tuvaluan",
     "internet_tld": ".tv",
     "flag_emoji": "🇹🇻"
+  },
+  {
+    "e164_cc": "1",
+    "iso2_cc": "UM",
+    "e164_sc": 0,
+    "geographic": true,
+    "level": 1,
+    "name": "U.S. Minor Pacific Islands",
+    "example": "2012345678",
+    "display_name": "U.S. Minor Pacific Islands (UM) [+1]",
+    "full_example_with_plus_sign": "+12012345678",
+    "display_name_no_e164_cc": "U.S. Minor Pacific Islands (UM)",
+    "e164_key": "1-UM-0",
+    "capital": "Washington, D.C. (administered)",
+    "language": "English",
+    "currency": {
+      "name": "United States Dollar",
+      "code": "USD",
+      "symbol": "\$"
+    },
+    "popular_sports": ["Fishing", "Water Sports"],
+    "calling_code": "+1",
+    "time_zone": "UTC-12 to UTC+12",
+    "region": "Oceania",
+    "subregion": "Micronesia and Polynesia",
+    "demonym": "American",
+    "internet_tld": ".um",
+    "flag_emoji": "🇺🇲"
   },
   {
     "e164_cc": "1",
