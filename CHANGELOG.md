@@ -1,3 +1,6 @@
+[0.0.5] - Additional Countries Added
+- Expanded the list of available countries with new additions.
+
 [0.0.4] - Bottom Sheet Country Picker
 - Added a bottom sheet view for the country picker, providing a more modern and user-friendly way to select a country.
 

@@ -26,7 +26,7 @@ Add `country_picker_pro` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  country_picker_pro: ^0.0.4
+  country_picker_pro: ^0.0.5
 ```
 
 ## Usage
